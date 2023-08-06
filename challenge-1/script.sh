@@ -20,6 +20,6 @@ while IFS= read -r line ; do
             echo $line
         fi
     fi
-done < /var/log/nginx/error.log error
+done >> /var/log/nginx/access.log
 
 echo "There were $errorCount error logs in the last 10 mins "
