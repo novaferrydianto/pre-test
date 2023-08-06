@@ -1,0 +1,11 @@
+version: '2'
+services:
+ app:
+  container_name: pre-test
+  image: nginx:alpine
+  volumes:
+   - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+   - .:/usr/share/nginx/html
+  restart: unless-stopped
+  ports:
+    - "8080:80"
